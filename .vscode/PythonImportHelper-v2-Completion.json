@@ -1,26 +1,10 @@
 [
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -29,6 +13,54 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "Students",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Students",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -105,6 +137,22 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -122,6 +170,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0001_initial",
+        "description": "myapp.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Students',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('fname', models.CharField(max_length=50)),",
+        "detail": "myapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "MyappConfig",
         "kind": 6,
         "importPath": "myapp.apps",
@@ -131,11 +188,20 @@
         "documentation": {}
     },
     {
+        "label": "Students",
+        "kind": 6,
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "peekOfCode": "class Students(models.Model):\n    fname = models.CharField(max_length=50)\n    lname = models.CharField(max_length=50)\n    age = models.IntegerField()\n    course = models.CharField(max_length=50)\n    image = models.ImageField(upload_to='studentsimage')\n    def __str__(self):\n        return self.fname + \" \" + self.lname + \" \" + str(self.age) + \" \" + self.course",
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('',views.home,name='home'),\n    path('about',views.about),\n    path('contact',views.contact),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('',views.home,name='home'),\n    path('about',views.about),\n    path('students',views.students),\n    path('contact',views.contact),\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -144,7 +210,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def home(request):\n    # return HttpResponse('This is my home page')\n    return render(request,'home.html')\ndef about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')",
+        "peekOfCode": "def home(request):\n    # return HttpResponse('This is my home page')\n    return render(request,'home.html')\ndef about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -153,7 +219,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')",
+        "peekOfCode": "def about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -162,7 +228,16 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def contact(request):\n    return render(request, 'contact.html')",
+        "peekOfCode": "def contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "students",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -279,7 +354,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -288,7 +363,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -297,7 +372,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -306,7 +381,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -315,7 +390,34 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "myblog.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "myblog.settings",
+        "description": "myblog.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "myblog.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "myblog.settings",
+        "description": "myblog.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "myblog.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "myblog.settings",
+        "description": "myblog.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n    \"/var/www/static/\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -333,7 +435,7 @@
         "kind": 5,
         "importPath": "myblog.urls",
         "description": "myblog.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('',include('myapp.urls'))\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('',include('myapp.urls'))\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "myblog.urls",
         "documentation": {}
     },

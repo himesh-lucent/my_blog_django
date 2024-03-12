@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from myapp.models import Students
 
 # Create your views here.
 def home(request):
@@ -11,3 +12,7 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def students(request):
+    all_students = Students.objects.all()
+    return render(request, 'students.html',{'students':all_students})
