@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="text-center my-3">Our Latest Blogs</h1>
+    
+    <div class="row">
+        {% for i in allPosts %}
+        <div class="col-md-3">
+            <div class="card"">
+                <img src="{{i.post_images.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.title}}</h5>
+                  <p class="card-text">{{i.content | truncatechars:150}}</p>
+                  <a href="/blog/{{i.slug}}" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}
