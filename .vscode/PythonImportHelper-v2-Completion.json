@@ -16,14 +16,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -72,11 +64,44 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "ckeditor.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "RichTextField",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "isExtraImport": true,
+        "detail": "ckeditor.fields",
         "documentation": {}
     },
     {
@@ -339,6 +364,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "blog.migrations.0002_alter_post_content",
+        "description": "blog.migrations.0002_alter_post_content",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blog', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='content',\n            field=ckeditor.fields.RichTextField(blank=True, null=True),\n        ),",
+        "detail": "blog.migrations.0002_alter_post_content",
+        "documentation": {}
+    },
+    {
         "label": "BlogConfig",
         "kind": 6,
         "importPath": "blog.apps",
@@ -352,7 +386,7 @@
         "kind": 6,
         "importPath": "blog.models",
         "description": "blog.models",
-        "peekOfCode": "class Post(models.Model):\n    sno = models.AutoField(primary_key=True)\n    title = models.CharField(max_length=255)\n    content = models.TextField()\n    author = models.CharField(max_length=15)\n    slug = models.CharField(max_length=150)\n    post_images = models.ImageField(upload_to='postimg')\n    def __str__(self):\n        return self.title + ' ' + self.author",
+        "peekOfCode": "class Post(models.Model):\n    sno = models.AutoField(primary_key=True)\n    title = models.CharField(max_length=255)\n    # content = models.TextField()\n    content = RichTextField(blank=True, null=True)\n    author = models.CharField(max_length=15)\n    slug = models.CharField(max_length=150)\n    post_images = models.ImageField(upload_to='postimg')\n    def __str__(self):\n        return self.title + ' ' + self.author",
         "detail": "blog.models",
         "documentation": {}
     },
@@ -550,7 +584,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp',\n    'blog',\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp',\n    'blog',\n    'ckeditor',",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -586,7 +620,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'myblog.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = 'myblog.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASES = {",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -595,7 +629,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.mysql',\n#         'NAME': 'djangodb',",
         "detail": "myblog.settings",
         "documentation": {}
     },
