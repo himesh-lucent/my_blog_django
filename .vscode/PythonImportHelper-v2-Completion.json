@@ -24,6 +24,70 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -40,19 +104,19 @@
         "documentation": {}
     },
     {
-        "label": "Students",
-        "importPath": "myapp.models",
-        "description": "myapp.models",
+        "label": "Post",
+        "importPath": "blog.models",
+        "description": "blog.models",
         "isExtraImport": true,
-        "detail": "myapp.models",
+        "detail": "blog.models",
         "documentation": {}
     },
     {
-        "label": "Students",
-        "importPath": "myapp.models",
-        "description": "myapp.models",
+        "label": "Post",
+        "importPath": "blog.models",
+        "description": "blog.models",
         "isExtraImport": true,
-        "detail": "myapp.models",
+        "detail": "blog.models",
         "documentation": {}
     },
     {
@@ -61,6 +125,22 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -88,11 +168,35 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "blog",
+        "description": "blog",
+        "isExtraImport": true,
+        "detail": "blog",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -109,6 +213,62 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Students",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Students",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "isExtraImport": true,
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "myapp",
+        "description": "myapp",
+        "isExtraImport": true,
+        "detail": "myapp",
         "documentation": {}
     },
     {
@@ -172,10 +332,82 @@
     {
         "label": "Migration",
         "kind": 6,
+        "importPath": "blog.migrations.0001_initial",
+        "description": "blog.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Post',\n            fields=[\n                ('sno', models.AutoField(primary_key=True, serialize=False)),\n                ('title', models.CharField(max_length=255)),",
+        "detail": "blog.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "BlogConfig",
+        "kind": 6,
+        "importPath": "blog.apps",
+        "description": "blog.apps",
+        "peekOfCode": "class BlogConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blog'",
+        "detail": "blog.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "blog.models",
+        "description": "blog.models",
+        "peekOfCode": "class Post(models.Model):\n    sno = models.AutoField(primary_key=True)\n    title = models.CharField(max_length=255)\n    content = models.TextField()\n    author = models.CharField(max_length=15)\n    slug = models.CharField(max_length=150)\n    post_images = models.ImageField(upload_to='postimg')\n    def __str__(self):\n        return self.title + ' ' + self.author",
+        "detail": "blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "blog.urls",
+        "description": "blog.urls",
+        "peekOfCode": "urlpatterns = [\n    path('',views.bloghome, name='bloghome'),\n    path('<str:slug>',views.blogpost, name='blogpost'),\n]",
+        "detail": "blog.urls",
+        "documentation": {}
+    },
+    {
+        "label": "bloghome",
+        "kind": 2,
+        "importPath": "blog.views",
+        "description": "blog.views",
+        "peekOfCode": "def bloghome(request):\n    allPosts = Post.objects.all()\n    context = {'allPosts':allPosts}\n    return render(request, 'blog/bloghome.html', context)\ndef blogpost(request, slug):\n    post = Post.objects.filter(slug=slug).first()\n    context = {'post':post}\n    return render(request, 'blog/blogpost.html',context)",
+        "detail": "blog.views",
+        "documentation": {}
+    },
+    {
+        "label": "blogpost",
+        "kind": 2,
+        "importPath": "blog.views",
+        "description": "blog.views",
+        "peekOfCode": "def blogpost(request, slug):\n    post = Post.objects.filter(slug=slug).first()\n    context = {'post':post}\n    return render(request, 'blog/blogpost.html',context)",
+        "detail": "blog.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
         "importPath": "myapp.migrations.0001_initial",
         "description": "myapp.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Students',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('fname', models.CharField(max_length=50)),",
         "detail": "myapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0002_contact",
+        "description": "myapp.migrations.0002_contact",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Contact',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('fname', models.CharField(max_length=50)),",
+        "detail": "myapp.migrations.0002_contact",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "myapp.migrations.0003_course",
+        "description": "myapp.migrations.0003_course",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0002_contact'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Course',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('cname', models.CharField(max_length=50)),",
+        "detail": "myapp.migrations.0003_course",
         "documentation": {}
     },
     {
@@ -192,7 +424,25 @@
         "kind": 6,
         "importPath": "myapp.models",
         "description": "myapp.models",
-        "peekOfCode": "class Students(models.Model):\n    fname = models.CharField(max_length=50)\n    lname = models.CharField(max_length=50)\n    age = models.IntegerField()\n    course = models.CharField(max_length=50)\n    image = models.ImageField(upload_to='studentsimage')\n    def __str__(self):\n        return self.fname + \" \" + self.lname + \" \" + str(self.age) + \" \" + self.course",
+        "peekOfCode": "class Students(models.Model):\n    fname = models.CharField(max_length=50)\n    lname = models.CharField(max_length=50)\n    age = models.IntegerField()\n    course = models.CharField(max_length=50)\n    image = models.ImageField(upload_to='studentsimage')\n    def __str__(self):\n        return self.fname + \" \" + self.lname + \" \" + str(self.age) + \" \" + self.course\nclass Contact(models.Model):\n    fname = models.CharField(max_length=50)",
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "kind": 6,
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "peekOfCode": "class Contact(models.Model):\n    fname = models.CharField(max_length=50)\n    lname = models.CharField(max_length=50)\n    email = models.CharField(max_length=50)\n    contact = models.CharField(max_length=50)\n    def __str__(self):\n        return self.fname + \" \" + self.lname\nclass Course(models.Model):\n    cname = models.CharField(max_length=50)\n    cdesc = models.CharField(max_length=255)",
+        "detail": "myapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "kind": 6,
+        "importPath": "myapp.models",
+        "description": "myapp.models",
+        "peekOfCode": "class Course(models.Model):\n    cname = models.CharField(max_length=50)\n    cdesc = models.CharField(max_length=255)\n    cimage = models.ImageField(upload_to='courseimage')\n    def __str__(self):\n        return self.cname",
         "detail": "myapp.models",
         "documentation": {}
     },
@@ -201,7 +451,7 @@
         "kind": 5,
         "importPath": "myapp.urls",
         "description": "myapp.urls",
-        "peekOfCode": "urlpatterns = [\n    path('',views.home,name='home'),\n    path('about',views.about),\n    path('students',views.students),\n    path('contact',views.contact),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('',views.home,name='home'),\n    path('about',views.about),\n    path('courses',views.courses),\n    path('students',views.students),\n    path('contact',views.contact),\n]",
         "detail": "myapp.urls",
         "documentation": {}
     },
@@ -210,7 +460,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def home(request):\n    # return HttpResponse('This is my home page')\n    return render(request,'home.html')\ndef about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()",
+        "peekOfCode": "def home(request):\n    # return HttpResponse('This is my home page')\n    return render(request,'myapp/home.html')\ndef about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'myapp/about.html')\ndef courses(request):\n    all_courses = Course.objects.all()\n    return render(request,'myapp/courses.html',{'courses':all_courses})\ndef contact(request):",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -219,7 +469,16 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'about.html')\ndef contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
+        "peekOfCode": "def about(request):\n    # return HttpResponse('This is my about page')\n    return render(request,'myapp/about.html')\ndef courses(request):\n    all_courses = Course.objects.all()\n    return render(request,'myapp/courses.html',{'courses':all_courses})\ndef contact(request):\n    if request.method == \"POST\":\n        fname = request.POST['fname']\n        lname = request.POST['lname']",
+        "detail": "myapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "courses",
+        "kind": 2,
+        "importPath": "myapp.views",
+        "description": "myapp.views",
+        "peekOfCode": "def courses(request):\n    all_courses = Course.objects.all()\n    return render(request,'myapp/courses.html',{'courses':all_courses})\ndef contact(request):\n    if request.method == \"POST\":\n        fname = request.POST['fname']\n        lname = request.POST['lname']\n        email = request.POST['email']\n        contact = request.POST['contact']\n        studetails = Contact(fname=fname, lname=lname, email=email, contact=contact)",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -228,7 +487,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def contact(request):\n    return render(request, 'contact.html')\ndef students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
+        "peekOfCode": "def contact(request):\n    if request.method == \"POST\":\n        fname = request.POST['fname']\n        lname = request.POST['lname']\n        email = request.POST['email']\n        contact = request.POST['contact']\n        studetails = Contact(fname=fname, lname=lname, email=email, contact=contact)\n        studetails.save()\n    return render(request, 'myapp/contact.html')\ndef students(request):",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -237,7 +496,7 @@
         "kind": 2,
         "importPath": "myapp.views",
         "description": "myapp.views",
-        "peekOfCode": "def students(request):\n    all_students = Students.objects.all()\n    return render(request, 'students.html',{'students':all_students})",
+        "peekOfCode": "def students(request):\n    all_students = Students.objects.all()\n    return render(request, 'myapp/students.html',{'students':all_students})",
         "detail": "myapp.views",
         "documentation": {}
     },
@@ -291,7 +550,7 @@
         "kind": 5,
         "importPath": "myblog.settings",
         "description": "myblog.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp',\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp',\n    'blog',\n]",
         "detail": "myblog.settings",
         "documentation": {}
     },
@@ -435,7 +694,7 @@
         "kind": 5,
         "importPath": "myblog.urls",
         "description": "myblog.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('',include('myapp.urls'))\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('',include('myapp.urls')),\n    path('blog/',include('blog.urls')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "myblog.urls",
         "documentation": {}
     },
